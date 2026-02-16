@@ -214,7 +214,8 @@ stamps/build-binutils-newlib: $(srcdir)/riscv-binutils-gdb
 		$(CONFIGURE_HOST) \
 		--prefix=$(INSTALL_DIR) \
 		@with_guile@ \
-		--disable-werror
+		--disable-werror \
+		--with-python=no
 	$(MAKE) -C $(notdir $@)
 	$(MAKE) -C $(notdir $@) install
 	mkdir -p $(dir $@) && touch $@

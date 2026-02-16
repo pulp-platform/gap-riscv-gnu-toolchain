@@ -1,4 +1,4 @@
-PKG_DIR=$(CURDIR)/install
+PKG_DIR?=$(CURDIR)/install
 
 all: build strip
 
